@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B90DCA71B03BAA100FE9535 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B90DCA61B03BAA100FE9535 /* MyTableViewController.m */; };
 		9BAE3A461AFA778200B029AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAE3A451AFA778200B029AB /* main.m */; };
 		9BAE3A491AFA778200B029AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAE3A481AFA778200B029AB /* AppDelegate.m */; };
 		9BAE3A4C1AFA778300B029AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAE3A4B1AFA778300B029AB /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B90DCA51B03BAA100FE9535 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		9B90DCA61B03BAA100FE9535 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
 		9BAE3A401AFA778200B029AB /* contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAE3A441AFA778200B029AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BAE3A451AFA778200B029AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				9BAE3A501AFA778300B029AB /* Images.xcassets */,
 				9BAE3A521AFA778300B029AB /* LaunchScreen.xib */,
 				9BAE3A431AFA778200B029AB /* Supporting Files */,
+				9B90DCA51B03BAA100FE9535 /* MyTableViewController.h */,
+				9B90DCA61B03BAA100FE9535 /* MyTableViewController.m */,
 			);
 			path = contacts;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				9BAE3A4C1AFA778300B029AB /* ViewController.m in Sources */,
 				9BAE3A491AFA778200B029AB /* AppDelegate.m in Sources */,
 				9BAE3A461AFA778200B029AB /* main.m in Sources */,
+				9B90DCA71B03BAA100FE9535 /* MyTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +420,7 @@
 				9BAE3A651AFA778300B029AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BAE3A661AFA778300B029AB /* Build configuration list for PBXNativeTarget "contactsTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +429,7 @@
 				9BAE3A681AFA778300B029AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
