@@ -1,5 +1,5 @@
 #import "COAppDelegate.h"
-#import "COContactsListViewController.h"
+#import "COContactListTableViewController.h"
 
 @interface COAppDelegate ()
 
@@ -10,7 +10,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    COContactsListViewController *controller = (COContactsListViewController *)navigationController.topViewController;
+    COContactListTableViewController *controller = (COContactListTableViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     return YES;
 }

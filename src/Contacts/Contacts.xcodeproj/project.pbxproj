@@ -17,6 +17,10 @@
 		9BC95BF41B189E2C0078DCAE /* ContactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC95BF31B189E2C0078DCAE /* ContactsTests.m */; };
 		9BC95C001B18A3640078DCAE /* COContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC95BFE1B18A3640078DCAE /* COContactDetailViewController.m */; };
 		9BC95C011B18A3640078DCAE /* COContactDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BC95BFF1B18A3640078DCAE /* COContactDetailViewController.xib */; };
+		9BC95C0A1B18AEA20078DCAE /* COContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC95C081B18AEA20078DCAE /* COContactListTableViewController.m */; };
+		9BC95C0B1B18AEA20078DCAE /* COContactListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BC95C091B18AEA20078DCAE /* COContactListTableViewController.xib */; };
+		9BC95C111B18B2860078DCAE /* COContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC95C0F1B18B2860078DCAE /* COContactTableViewCell.m */; };
+		9BC95C121B18B2860078DCAE /* COContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BC95C101B18B2860078DCAE /* COContactTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,12 @@
 		9BC95BFD1B18A3640078DCAE /* COContactDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COContactDetailViewController.h; sourceTree = "<group>"; };
 		9BC95BFE1B18A3640078DCAE /* COContactDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COContactDetailViewController.m; sourceTree = "<group>"; };
 		9BC95BFF1B18A3640078DCAE /* COContactDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COContactDetailViewController.xib; sourceTree = "<group>"; };
+		9BC95C071B18AEA20078DCAE /* COContactListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COContactListTableViewController.h; sourceTree = "<group>"; };
+		9BC95C081B18AEA20078DCAE /* COContactListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COContactListTableViewController.m; sourceTree = "<group>"; };
+		9BC95C091B18AEA20078DCAE /* COContactListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COContactListTableViewController.xib; sourceTree = "<group>"; };
+		9BC95C0E1B18B2860078DCAE /* COContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COContactTableViewCell.h; sourceTree = "<group>"; };
+		9BC95C0F1B18B2860078DCAE /* COContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COContactTableViewCell.m; sourceTree = "<group>"; };
+		9BC95C101B18B2860078DCAE /* COContactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COContactTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,13 +98,13 @@
 		9BC95BD01B189E2C0078DCAE /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				9BC95C021B18A4ED0078DCAE /* ViewControllerAndViews */,
+				9BC95C041B18ADAC0078DCAE /* Model */,
+				9BC95C031B18AD900078DCAE /* Views */,
+				9BC95C021B18A4ED0078DCAE /* ViewControllers */,
 				9BC95BD51B189E2C0078DCAE /* COAppDelegate.h */,
 				9BC95BD61B189E2C0078DCAE /* COAppDelegate.m */,
 				9BC95BE11B189E2C0078DCAE /* Main.storyboard */,
 				9BC95BE41B189E2C0078DCAE /* Images.xcassets */,
-				9BC95BE61B189E2C0078DCAE /* LaunchScreen.xib */,
-				9BC95BD81B189E2C0078DCAE /* Contacts.xcdatamodeld */,
 				9BC95BD11B189E2C0078DCAE /* Supporting Files */,
 			);
 			path = Contacts;
@@ -126,16 +136,38 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9BC95C021B18A4ED0078DCAE /* ViewControllerAndViews */ = {
+		9BC95C021B18A4ED0078DCAE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				9BC95BDB1B189E2C0078DCAE /* COContactsListViewController.h */,
 				9BC95BDC1B189E2C0078DCAE /* COContactsListViewController.m */,
 				9BC95BFD1B18A3640078DCAE /* COContactDetailViewController.h */,
 				9BC95BFE1B18A3640078DCAE /* COContactDetailViewController.m */,
-				9BC95BFF1B18A3640078DCAE /* COContactDetailViewController.xib */,
+				9BC95C071B18AEA20078DCAE /* COContactListTableViewController.h */,
+				9BC95C081B18AEA20078DCAE /* COContactListTableViewController.m */,
 			);
-			name = ViewControllerAndViews;
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9BC95C031B18AD900078DCAE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9BC95BFF1B18A3640078DCAE /* COContactDetailViewController.xib */,
+				9BC95C091B18AEA20078DCAE /* COContactListTableViewController.xib */,
+				9BC95C0E1B18B2860078DCAE /* COContactTableViewCell.h */,
+				9BC95C0F1B18B2860078DCAE /* COContactTableViewCell.m */,
+				9BC95C101B18B2860078DCAE /* COContactTableViewCell.xib */,
+				9BC95BE61B189E2C0078DCAE /* LaunchScreen.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9BC95C041B18ADAC0078DCAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9BC95BD81B189E2C0078DCAE /* Contacts.xcdatamodeld */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +252,9 @@
 			files = (
 				9BC95BE31B189E2C0078DCAE /* Main.storyboard in Resources */,
 				9BC95BE81B189E2C0078DCAE /* LaunchScreen.xib in Resources */,
+				9BC95C121B18B2860078DCAE /* COContactTableViewCell.xib in Resources */,
 				9BC95C011B18A3640078DCAE /* COContactDetailViewController.xib in Resources */,
+				9BC95C0B1B18AEA20078DCAE /* COContactListTableViewController.xib in Resources */,
 				9BC95BE51B189E2C0078DCAE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,10 +273,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BC95C111B18B2860078DCAE /* COContactTableViewCell.m in Sources */,
 				9BC95BDD1B189E2C0078DCAE /* COContactsListViewController.m in Sources */,
 				9BC95C001B18A3640078DCAE /* COContactDetailViewController.m in Sources */,
 				9BC95BD71B189E2C0078DCAE /* COAppDelegate.m in Sources */,
 				9BC95BD41B189E2C0078DCAE /* main.m in Sources */,
+				9BC95C0A1B18AEA20078DCAE /* COContactListTableViewController.m in Sources */,
 				9BC95BDA1B189E2C0078DCAE /* Contacts.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
