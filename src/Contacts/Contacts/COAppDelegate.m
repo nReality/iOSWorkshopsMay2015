@@ -1,17 +1,16 @@
-#import "AppDelegate.h"
-#import "DetailViewController.h"
-#import "MasterViewController.h"
+#import "COAppDelegate.h"
+#import "COContactsListViewController.h"
 
-@interface AppDelegate ()
+@interface COAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation COAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
+    COContactsListViewController *controller = (COContactsListViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     return YES;
 }

@@ -1,12 +1,16 @@
-#import "DetailViewController.h"
 
-@interface DetailViewController ()
+#import "COContactDetailViewController.h"
+
+@interface COContactDetailViewController ()
 
 @end
 
-@implementation DetailViewController
+@implementation COContactDetailViewController
 
-#pragma mark - Managing the detail item
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self configureView];
+}
 
 - (void)setDetailItem:(id)newDetailItem {
     if (_detailItem != newDetailItem) {
@@ -15,10 +19,6 @@
     }
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self configureView];
-}
 
 - (void)configureView {
     if (self.detailItem) {

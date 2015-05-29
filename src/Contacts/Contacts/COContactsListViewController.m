@@ -1,11 +1,11 @@
 
-#import "MasterViewController.h"
-#import "DetailViewController.h"
+#import "COContactsListViewController.h"
+#import "COContactDetailViewController.h"
 
-@interface MasterViewController ()
+@interface COContactsListViewController ()
 @end
 
-@implementation MasterViewController
+@implementation COContactsListViewController
 
 - (void)awakeFromNib {
     [super awakeFromNib];
