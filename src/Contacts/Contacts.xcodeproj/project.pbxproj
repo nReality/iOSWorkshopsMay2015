@@ -10,7 +10,6 @@
 		9BC95BD41B189E2C0078DCAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC95BD31B189E2C0078DCAE /* main.m */; };
 		9BC95BD71B189E2C0078DCAE /* COAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC95BD61B189E2C0078DCAE /* COAppDelegate.m */; };
 		9BC95BDA1B189E2C0078DCAE /* Contacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BC95BD81B189E2C0078DCAE /* Contacts.xcdatamodeld */; };
-		9BC95BDD1B189E2C0078DCAE /* COContactsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC95BDC1B189E2C0078DCAE /* COContactsListViewController.m */; };
 		9BC95BE31B189E2C0078DCAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BC95BE11B189E2C0078DCAE /* Main.storyboard */; };
 		9BC95BE51B189E2C0078DCAE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BC95BE41B189E2C0078DCAE /* Images.xcassets */; };
 		9BC95BE81B189E2C0078DCAE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BC95BE61B189E2C0078DCAE /* LaunchScreen.xib */; };
@@ -40,8 +39,6 @@
 		9BC95BD51B189E2C0078DCAE /* COAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COAppDelegate.h; sourceTree = "<group>"; };
 		9BC95BD61B189E2C0078DCAE /* COAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COAppDelegate.m; sourceTree = "<group>"; };
 		9BC95BD91B189E2C0078DCAE /* Contacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contacts.xcdatamodel; sourceTree = "<group>"; };
-		9BC95BDB1B189E2C0078DCAE /* COContactsListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COContactsListViewController.h; sourceTree = "<group>"; };
-		9BC95BDC1B189E2C0078DCAE /* COContactsListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COContactsListViewController.m; sourceTree = "<group>"; };
 		9BC95BE21B189E2C0078DCAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9BC95BE41B189E2C0078DCAE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9BC95BE71B189E2C0078DCAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -139,8 +136,6 @@
 		9BC95C021B18A4ED0078DCAE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9BC95BDB1B189E2C0078DCAE /* COContactsListViewController.h */,
-				9BC95BDC1B189E2C0078DCAE /* COContactsListViewController.m */,
 				9BC95BFD1B18A3640078DCAE /* COContactDetailViewController.h */,
 				9BC95BFE1B18A3640078DCAE /* COContactDetailViewController.m */,
 				9BC95C071B18AEA20078DCAE /* COContactListTableViewController.h */,
@@ -274,7 +269,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BC95C111B18B2860078DCAE /* COContactTableViewCell.m in Sources */,
-				9BC95BDD1B189E2C0078DCAE /* COContactsListViewController.m in Sources */,
 				9BC95C001B18A3640078DCAE /* COContactDetailViewController.m in Sources */,
 				9BC95BD71B189E2C0078DCAE /* COAppDelegate.m in Sources */,
 				9BC95BD41B189E2C0078DCAE /* main.m in Sources */,

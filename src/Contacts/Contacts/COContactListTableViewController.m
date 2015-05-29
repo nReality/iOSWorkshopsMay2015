@@ -7,6 +7,7 @@
 @implementation COContactListTableViewController
 
 static NSString *CellIdentifier = @"CellIdentifier";
+static NSString *ShowDetailSegue = @"showDetail";
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -43,7 +44,7 @@ static NSString *CellIdentifier = @"CellIdentifier";
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    if ([[segue identifier] isEqualToString:ShowDetailSegue]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         [[segue destinationViewController] setDetailItem:object];
@@ -51,6 +52,9 @@ static NSString *CellIdentifier = @"CellIdentifier";
 }
 
 #pragma mark - Table View
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self performSegueWithIdentifier:ShowDetailSegue sender:self];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [[self.fetchedResultsController sections] count];
@@ -108,7 +112,7 @@ static NSString *CellIdentifier = @"CellIdentifier";
     
     [fetchRequest setSortDescriptors:sortDescriptors];
     
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Cache"];
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;
     
