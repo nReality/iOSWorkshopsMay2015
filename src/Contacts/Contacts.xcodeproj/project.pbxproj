@@ -20,6 +20,8 @@
 		9BC95C0B1B18AEA20078DCAE /* COContactListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BC95C091B18AEA20078DCAE /* COContactListTableViewController.xib */; };
 		9BC95C111B18B2860078DCAE /* COContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC95C0F1B18B2860078DCAE /* COContactTableViewCell.m */; };
 		9BC95C121B18B2860078DCAE /* COContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BC95C101B18B2860078DCAE /* COContactTableViewCell.xib */; };
+		9BC95C161B18B7C40078DCAE /* COContactEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC95C141B18B7C40078DCAE /* COContactEditViewController.m */; };
+		9BC95C171B18B7C40078DCAE /* COContactEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BC95C151B18B7C40078DCAE /* COContactEditViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,9 @@
 		9BC95C0E1B18B2860078DCAE /* COContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COContactTableViewCell.h; sourceTree = "<group>"; };
 		9BC95C0F1B18B2860078DCAE /* COContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COContactTableViewCell.m; sourceTree = "<group>"; };
 		9BC95C101B18B2860078DCAE /* COContactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COContactTableViewCell.xib; sourceTree = "<group>"; };
+		9BC95C131B18B7C40078DCAE /* COContactEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COContactEditViewController.h; sourceTree = "<group>"; };
+		9BC95C141B18B7C40078DCAE /* COContactEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COContactEditViewController.m; sourceTree = "<group>"; };
+		9BC95C151B18B7C40078DCAE /* COContactEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COContactEditViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +141,8 @@
 		9BC95C021B18A4ED0078DCAE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9BC95C131B18B7C40078DCAE /* COContactEditViewController.h */,
+				9BC95C141B18B7C40078DCAE /* COContactEditViewController.m */,
 				9BC95BFD1B18A3640078DCAE /* COContactDetailViewController.h */,
 				9BC95BFE1B18A3640078DCAE /* COContactDetailViewController.m */,
 				9BC95C071B18AEA20078DCAE /* COContactListTableViewController.h */,
@@ -147,11 +154,12 @@
 		9BC95C031B18AD900078DCAE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9BC95C151B18B7C40078DCAE /* COContactEditViewController.xib */,
 				9BC95BFF1B18A3640078DCAE /* COContactDetailViewController.xib */,
 				9BC95C091B18AEA20078DCAE /* COContactListTableViewController.xib */,
+				9BC95C101B18B2860078DCAE /* COContactTableViewCell.xib */,
 				9BC95C0E1B18B2860078DCAE /* COContactTableViewCell.h */,
 				9BC95C0F1B18B2860078DCAE /* COContactTableViewCell.m */,
-				9BC95C101B18B2860078DCAE /* COContactTableViewCell.xib */,
 				9BC95BE61B189E2C0078DCAE /* LaunchScreen.xib */,
 			);
 			name = Views;
@@ -246,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BC95BE31B189E2C0078DCAE /* Main.storyboard in Resources */,
+				9BC95C171B18B7C40078DCAE /* COContactEditViewController.xib in Resources */,
 				9BC95BE81B189E2C0078DCAE /* LaunchScreen.xib in Resources */,
 				9BC95C121B18B2860078DCAE /* COContactTableViewCell.xib in Resources */,
 				9BC95C011B18A3640078DCAE /* COContactDetailViewController.xib in Resources */,
@@ -270,6 +279,7 @@
 			files = (
 				9BC95C111B18B2860078DCAE /* COContactTableViewCell.m in Sources */,
 				9BC95C001B18A3640078DCAE /* COContactDetailViewController.m in Sources */,
+				9BC95C161B18B7C40078DCAE /* COContactEditViewController.m in Sources */,
 				9BC95BD71B189E2C0078DCAE /* COAppDelegate.m in Sources */,
 				9BC95BD41B189E2C0078DCAE /* main.m in Sources */,
 				9BC95C0A1B18AEA20078DCAE /* COContactListTableViewController.m in Sources */,

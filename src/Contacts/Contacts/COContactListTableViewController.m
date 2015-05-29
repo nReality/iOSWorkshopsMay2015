@@ -34,6 +34,8 @@ static NSString *ShowDetailSegue = @"showDetail";
     
     [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
     
+    [self performSegueWithIdentifier:@"addContact" sender:self];
+    
     NSError *error = nil;
     if (![context save:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);

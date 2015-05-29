@@ -11,11 +11,22 @@
                     <navigationItem key="navigationItem" id="J0b-NO-vPS"/>
                     <connections>
                         <segue destination="Sri-u8-9p6" kind="show" identifier="showDetail" id="t4n-8S-bBm"/>
+                        <segue destination="Jpz-6G-Ruj" kind="showDetail" identifier="addContact" id="s3W-GD-plu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1CK-kE-ds4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1258.5" y="-663"/>
+        </scene>
+        <!--Contact Edit View Controller-->
+        <scene sceneID="hek-ly-frU">
+            <objects>
+                <viewController id="Jpz-6G-Ruj" customClass="COContactEditViewController" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="geO-Ka-2lK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1345.5" y="233"/>
         </scene>
         <!--Contact Detail View Controller-->
         <scene sceneID="00W-la-J2F">
