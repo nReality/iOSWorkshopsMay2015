@@ -2,11 +2,13 @@
 #import "COContactListTableViewController.h"
 #import "COContactDetailViewController.h"
 #import "COContactTableViewCell.h"
+#import "COContactEditViewController.h"
 
 @implementation COContactListTableViewController
 
 static NSString *CellIdentifier = @"CellIdentifier";
 static NSString *ShowDetailSegue = @"showDetail";
+static NSString *addContactSegue = @"addContact";
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -20,26 +22,14 @@ static NSString *ShowDetailSegue = @"showDetail";
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
 }
 
 
-- (void)insertNewObject:(id)sender {
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+- (void)addNewObject:(id)sender {
     
-    
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-    
-    [self performSegueWithIdentifier:@"addContact" sender:self];
-    
-    NSError *error = nil;
-    if (![context save:&error]) {
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
+    [self performSegueWithIdentifier:addContactSegue sender:self];
 }
 
 #pragma mark - Segues
@@ -49,6 +39,9 @@ static NSString *ShowDetailSegue = @"showDetail";
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         [[segue destinationViewController] setEventDetail:object];
+    }
+    if ([[segue identifier] isEqualToString:addContactSegue]) {
+        [[segue destinationViewController] setContext:self.managedObjectContext];
     }
 }
 

@@ -1,5 +1,6 @@
 
 #import "COContactDetailViewController.h"
+#import "COContactEditViewController.h"
 
 @interface COContactDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
@@ -15,14 +16,15 @@
     [self configureView];
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+     [self configureView];
+}
+
 - (void)edit:(id)sender {
     [self performSegueWithIdentifier:@"editContact" sender:self];
 }
 
-- (void)setEditing:(BOOL)editing animated:(BOOL)animated{
-    [super setEditing:editing animated:animated];
-    
-}
 
 - (void)setEventDetail:(id)newDetailItem {
     if (_eventDetail != newDetailItem) {
@@ -31,10 +33,15 @@
     }
 }
 
-
 - (void)configureView {
     if (self.eventDetail) {
         self.detailDescriptionLabel.text = [[self.eventDetail valueForKey:@"timeStamp"] description];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"editContact"]) {
+        [[segue destinationViewController] setContext:self.eventDetail.managedObjectContext];
     }
 }
 
