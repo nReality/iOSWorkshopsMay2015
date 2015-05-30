@@ -10,7 +10,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(edit:)];
+    self.navigationItem.rightBarButtonItem = editButton;
     [self configureView];
+}
+
+- (void)edit:(id)sender {
+    [self performSegueWithIdentifier:@"editContact" sender:self];
+}
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated{
+    [super setEditing:editing animated:animated];
+    
 }
 
 - (void)setEventDetail:(id)newDetailItem {

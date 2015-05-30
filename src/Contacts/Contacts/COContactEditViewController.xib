@@ -24,7 +24,7 @@
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1D-6L-iVS">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <items>
-                        <navigationItem title="Add/Edit" id="N38-OS-2e0">
+                        <navigationItem id="N38-OS-2e0">
                             <barButtonItem key="leftBarButtonItem" title="Cancel" id="ey3-Oa-MYW">
                                 <connections>
                                     <action selector="cancel:" destination="-1" id="ziI-PQ-5go"/>

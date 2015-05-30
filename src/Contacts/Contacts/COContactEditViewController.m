@@ -25,4 +25,5 @@
     return UIBarPositionTopAttached;//this will make sure the status bar background looks like the nav bar
 }
 
+
 @end

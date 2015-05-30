@@ -4,11 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Contact List Table View Controller-->
+        <!--All Contacts-->
         <scene sceneID="GWj-X0-JYB">
             <objects>
-                <tableViewController id="PRV-Yh-9oM" customClass="COContactListTableViewController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="J0b-NO-vPS"/>
+                <tableViewController title="All Contacts" id="PRV-Yh-9oM" customClass="COContactListTableViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="All Contacts" id="J0b-NO-vPS"/>
                     <connections>
                         <segue destination="Sri-u8-9p6" kind="show" identifier="showDetail" id="t4n-8S-bBm"/>
                         <segue destination="Jpz-6G-Ruj" kind="showDetail" identifier="addContact" id="s3W-GD-plu"/>
@@ -29,7 +29,11 @@
         <!--Contact Detail View Controller-->
         <scene sceneID="00W-la-J2F">
             <objects>
-                <viewController id="Sri-u8-9p6" customClass="COContactDetailViewController" sceneMemberID="viewController"/>
+                <viewController id="Sri-u8-9p6" customClass="COContactDetailViewController" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="Jpz-6G-Ruj" kind="presentation" identifier="editContact" modalTransitionStyle="crossDissolve" id="miW-bg-mpT"/>
+                    </connections>
+                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kYc-CY-Rnc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2158.5" y="-663"/>
@@ -53,4 +57,7 @@
             <point key="canvasLocation" x="340.5" y="-663"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="s3W-GD-plu"/>
+    </inferredMetricsTieBreakers>
 </document>
