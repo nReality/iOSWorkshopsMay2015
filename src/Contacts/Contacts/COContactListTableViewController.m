@@ -38,7 +38,7 @@ static NSString *addContactSegue = @"addContact";
     if ([[segue identifier] isEqualToString:ShowDetailSegue]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         COContact *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        [[segue destinationViewController] setEventDetail:object];
+        [[segue destinationViewController] setContact:object];
     }
     if ([[segue identifier] isEqualToString:addContactSegue]) {
         [[segue destinationViewController] setContext:self.managedObjectContext];

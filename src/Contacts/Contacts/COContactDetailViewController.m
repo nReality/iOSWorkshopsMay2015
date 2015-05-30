@@ -26,23 +26,23 @@ static NSString *editContactSegue = @"editContact";
     [self performSegueWithIdentifier:editContactSegue sender:self];
 }
 
-- (void)setEventDetail:(id)newDetailItem {
-    if (_eventDetail != newDetailItem) {
-        _eventDetail = newDetailItem;
+- (void)setContact:(id)newDetailItem {
+    if (_contact != newDetailItem) {
+        _contact = newDetailItem;
         [self configureView];
     }
 }
 
 - (void)configureView {
-    if (self.eventDetail) {
-        self.fullNameLabel.text = self.eventDetail.fullName;
-        self.phoneNumberLabel.text = self.eventDetail.phoneNumber;    }
+    if (self.contact) {
+        self.fullNameLabel.text = self.contact.fullName;
+        self.phoneNumberLabel.text = self.contact.phoneNumber;    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:editContactSegue]) {
-        [[segue destinationViewController] setEventDetail: self.eventDetail];
-        [[segue destinationViewController] setContext:self.eventDetail.managedObjectContext];
+        [[segue destinationViewController] setContact: self.contact];
+        [[segue destinationViewController] setContext:self.contact.managedObjectContext];
     }
 }
 

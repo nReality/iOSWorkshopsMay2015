@@ -4,5 +4,5 @@
 #import "COContact+Calculated.h"
 
 @interface COContactDetailViewController : UIViewController
-@property (strong, nonatomic) COContact *eventDetail;
+@property (strong, nonatomic) COContact *contact;
 @end

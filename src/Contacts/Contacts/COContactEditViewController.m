@@ -27,15 +27,15 @@
 }
 
 -(void)setViewFromModel{
-    self.firstNameLabel.text = self.eventDetail.firstName;
-    self.lastNameLabel.text = self.eventDetail.lastName;
-    self.phoneNumberLabel.text = self.eventDetail.phoneNumber;
+    self.firstNameLabel.text = self.contact.firstName;
+    self.lastNameLabel.text = self.contact.lastName;
+    self.phoneNumberLabel.text = self.contact.phoneNumber;
 }
 
 -(void)setModelFromView{
-    self.eventDetail.firstName = self.firstNameLabel.text;
-    self.eventDetail.lastName =  self.lastNameLabel.text;
-    self.eventDetail.phoneNumber =  self.phoneNumberLabel.text;
+    self.contact.firstName = self.firstNameLabel.text;
+    self.contact.lastName =  self.lastNameLabel.text;
+    self.contact.phoneNumber =  self.phoneNumberLabel.text;
     NSError *error = nil;
     if (![self.context save:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
@@ -45,14 +45,14 @@
 
 - (void)addOrUpdateContact {
     if ([self isAddingNew]){
-        self.eventDetail = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([COContact class]) inManagedObjectContext:self.context];
+        self.contact = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([COContact class]) inManagedObjectContext:self.context];
     }
     
     [self setModelFromView];
 }
 
 -(BOOL)isAddingNew{
-    return !self.eventDetail;
+    return !self.contact;
 }
 
 - (UIBarPosition)positionForBar:(id<UIBarPositioning>)bar

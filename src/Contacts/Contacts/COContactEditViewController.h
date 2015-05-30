@@ -4,6 +4,6 @@
 #import "COContact+Calculated.h"
 
 @interface COContactEditViewController : UIViewController <UINavigationBarDelegate>
-@property (strong, nonatomic) COContact *eventDetail;
+@property (strong, nonatomic) COContact *contact;
 @property (strong, nonatomic) NSManagedObjectContext *context;
 @end
