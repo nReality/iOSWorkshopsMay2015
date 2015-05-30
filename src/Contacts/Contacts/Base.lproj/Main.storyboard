@@ -24,12 +24,12 @@
                 <viewController extendedLayoutIncludesOpaqueBars="YES" id="Jpz-6G-Ruj" customClass="COContactEditViewController" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="geO-Ka-2lK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1258.5" y="237"/>
+            <point key="canvasLocation" x="2158.5" y="213"/>
         </scene>
-        <!--Contact Detail View Controller-->
+        <!--View Contact-->
         <scene sceneID="00W-la-J2F">
             <objects>
-                <viewController id="Sri-u8-9p6" customClass="COContactDetailViewController" sceneMemberID="viewController">
+                <viewController title="View Contact" id="Sri-u8-9p6" customClass="COContactDetailViewController" sceneMemberID="viewController">
                     <connections>
                         <segue destination="Jpz-6G-Ruj" kind="presentation" identifier="editContact" modalTransitionStyle="crossDissolve" id="miW-bg-mpT"/>
                     </connections>
@@ -58,6 +58,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="s3W-GD-plu"/>
+        <segue reference="miW-bg-mpT"/>
     </inferredMetricsTieBreakers>
 </document>
