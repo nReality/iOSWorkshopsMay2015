@@ -2,6 +2,9 @@
 #import "COContactEditViewController.h"
 
 @interface COContactEditViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *firstNameLabel;
+@property (weak, nonatomic) IBOutlet UITextField *lastNameLabel;
+@property (weak, nonatomic) IBOutlet UITextField *phoneNumberLabel;
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @end
 
@@ -10,6 +13,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationBar.delegate = self;
+    [self setViewFromModel];
     
 }
 - (IBAction)cancel:(id)sender {
@@ -22,19 +26,29 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)addOrUpdateContact {
-    if ([self isAddingNew]){
-        self.eventDetail = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([COContact class]) inManagedObjectContext:self.context];
-    }
-    
-    self.eventDetail.firstName = @"aaa";
-    self.eventDetail.lastName = @"bb";
-    
+-(void)setViewFromModel{
+    self.firstNameLabel.text = self.eventDetail.firstName;
+    self.lastNameLabel.text = self.eventDetail.lastName;
+    self.phoneNumberLabel.text = self.eventDetail.phoneNumber;
+}
+
+-(void)setModelFromView{
+    self.eventDetail.firstName = self.firstNameLabel.text;
+    self.eventDetail.lastName =  self.lastNameLabel.text;
+    self.eventDetail.phoneNumber =  self.phoneNumberLabel.text;
     NSError *error = nil;
     if (![self.context save:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+}
+
+- (void)addOrUpdateContact {
+    if ([self isAddingNew]){
+        self.eventDetail = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([COContact class]) inManagedObjectContext:self.context];
+    }
+    
+    [self setModelFromView];
 }
 
 -(BOOL)isAddingNew{

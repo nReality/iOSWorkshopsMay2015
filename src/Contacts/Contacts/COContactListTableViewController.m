@@ -85,6 +85,7 @@ static NSString *addContactSegue = @"addContact";
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     COContact *contact = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = contact.fullName;
+    cell.detailTextLabel.text = contact.phoneNumber;
 }
 
 #pragma mark - Fetched results controller

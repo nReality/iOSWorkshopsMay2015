@@ -6,7 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="COContactDetailViewController">
             <connections>
-                <outlet property="detailDescriptionLabel" destination="xeQ-oe-Akd" id="AnZ-Sx-gD9"/>
+                <outlet property="fullNameLabel" destination="2qb-mq-rhd" id="G7c-aa-EEy"/>
+                <outlet property="phoneNumberLabel" destination="Ntn-lu-wRE" id="C3e-XO-247"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,12 +16,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeQ-oe-Akd">
-                    <rect key="frame" x="262" y="135" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{fullname}" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qb-mq-rhd">
                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
@@ -42,13 +37,11 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="xeQ-oe-Akd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="AuW-cb-cZb"/>
                 <constraint firstItem="2qb-mq-rhd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="QR6-jC-Td6"/>
                 <constraint firstItem="7cr-WE-hcQ" firstAttribute="top" secondItem="2qb-mq-rhd" secondAttribute="bottom" constant="15" id="glc-GS-aLG"/>
                 <constraint firstItem="2qb-mq-rhd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="hMf-Ee-b3p"/>
                 <constraint firstItem="2qb-mq-rhd" firstAttribute="leading" secondItem="7cr-WE-hcQ" secondAttribute="leading" id="iYu-hF-Qzg"/>
                 <constraint firstItem="Ntn-lu-wRE" firstAttribute="top" secondItem="7cr-WE-hcQ" secondAttribute="bottom" id="mtc-AH-9Wm"/>
-                <constraint firstItem="xeQ-oe-Akd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="200" id="uNw-qZ-xES"/>
                 <constraint firstItem="2qb-mq-rhd" firstAttribute="leading" secondItem="Ntn-lu-wRE" secondAttribute="leading" id="wQa-ak-c6H"/>
             </constraints>
             <variation key="default">

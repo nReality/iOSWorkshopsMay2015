@@ -6,7 +6,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="COContactEditViewController">
             <connections>
+                <outlet property="firstNameLabel" destination="6B3-7E-FVJ" id="d4f-XB-XZC"/>
+                <outlet property="lastNameLabel" destination="fBn-1r-1Ro" id="vlt-KQ-60e"/>
                 <outlet property="navigationBar" destination="E1D-6L-iVS" id="rKB-cc-WkR"/>
+                <outlet property="phoneNumberLabel" destination="X0l-Qv-QAI" id="XOx-lF-wJm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -3,7 +3,8 @@
 #import "COContactEditViewController.h"
 
 @interface COContactDetailViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fullNameLabel;
 @end
 
 @implementation COContactDetailViewController
@@ -34,8 +35,8 @@ static NSString *editContactSegue = @"editContact";
 
 - (void)configureView {
     if (self.eventDetail) {
-        self.detailDescriptionLabel.text =self.eventDetail.fullName;
-    }
+        self.fullNameLabel.text = self.eventDetail.fullName;
+        self.phoneNumberLabel.text = self.eventDetail.phoneNumber;    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
