@@ -2,6 +2,7 @@
 #import "COContactDetailViewController.h"
 
 @interface COContactDetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
 @end
 
@@ -12,17 +13,17 @@
     [self configureView];
 }
 
-- (void)setDetailItem:(id)newDetailItem {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
+- (void)setEventDetail:(id)newDetailItem {
+    if (_eventDetail != newDetailItem) {
+        _eventDetail = newDetailItem;
         [self configureView];
     }
 }
 
 
 - (void)configureView {
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+    if (self.eventDetail) {
+        self.detailDescriptionLabel.text = [[self.eventDetail valueForKey:@"timeStamp"] description];
     }
 }
 

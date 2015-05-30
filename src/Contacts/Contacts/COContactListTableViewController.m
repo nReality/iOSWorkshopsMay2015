@@ -3,7 +3,6 @@
 #import "COContactDetailViewController.h"
 #import "COContactTableViewCell.h"
 
-
 @implementation COContactListTableViewController
 
 static NSString *CellIdentifier = @"CellIdentifier";
@@ -49,7 +48,7 @@ static NSString *ShowDetailSegue = @"showDetail";
     if ([[segue identifier] isEqualToString:ShowDetailSegue]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        [[segue destinationViewController] setDetailItem:object];
+        [[segue destinationViewController] setEventDetail:object];
     }
 }
 

@@ -1,6 +1,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface COContactEditViewController : UIViewController
+@interface COContactEditViewController : UIViewController <UINavigationBarDelegate>
 
 @end

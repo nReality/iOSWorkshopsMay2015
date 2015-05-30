@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="COContactEditViewController">
             <connections>
+                <outlet property="navigationBar" destination="E1D-6L-iVS" id="rKB-cc-WkR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,7 +30,11 @@
                                     <action selector="cancel:" destination="-1" id="ziI-PQ-5go"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="8Gu-hK-YAm"/>
+                            <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="8Gu-hK-YAm">
+                                <connections>
+                                    <action selector="done:" destination="-1" id="ony-vV-OIn"/>
+                                </connections>
+                            </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>
@@ -39,10 +44,8 @@
                 <constraint firstItem="8Vp-vJ-Dmf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="157" id="N54-ID-egR"/>
                 <constraint firstItem="E1D-6L-iVS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="X3X-ym-h9j"/>
                 <constraint firstAttribute="trailing" secondItem="E1D-6L-iVS" secondAttribute="trailing" id="Y9w-XL-VJC"/>
-                <constraint firstItem="E1D-6L-iVS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YAV-b9-ZTC">
-                    <variation key="widthClass=compact" constant="13"/>
-                </constraint>
                 <constraint firstItem="8Vp-vJ-Dmf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="Yct-U4-cFJ"/>
+                <constraint firstItem="E1D-6L-iVS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="gkY-uY-jvQ"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
@@ -52,7 +55,7 @@
                 <mask key="constraints">
                     <exclude reference="X3X-ym-h9j"/>
                     <exclude reference="Y9w-XL-VJC"/>
-                    <exclude reference="YAV-b9-ZTC"/>
+                    <exclude reference="gkY-uY-jvQ"/>
                     <exclude reference="N54-ID-egR"/>
                     <exclude reference="Yct-U4-cFJ"/>
                 </mask>
@@ -65,7 +68,7 @@
                 <mask key="constraints">
                     <include reference="X3X-ym-h9j"/>
                     <include reference="Y9w-XL-VJC"/>
-                    <include reference="YAV-b9-ZTC"/>
+                    <include reference="gkY-uY-jvQ"/>
                     <include reference="N54-ID-egR"/>
                     <include reference="Yct-U4-cFJ"/>
                 </mask>
