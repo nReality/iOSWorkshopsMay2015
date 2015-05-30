@@ -26,7 +26,6 @@ static NSString *addContactSegue = @"addContact";
     self.navigationItem.rightBarButtonItem = addButton;
 }
 
-
 - (void)addNewObject:(id)sender {
     
     [self performSegueWithIdentifier:addContactSegue sender:self];

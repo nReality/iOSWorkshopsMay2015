@@ -4,10 +4,10 @@
 
 @interface COContactDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
-
 @end
 
 @implementation COContactDetailViewController
+static NSString *editContactSegue = @"editContact";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,9 +22,8 @@
 }
 
 - (void)edit:(id)sender {
-    [self performSegueWithIdentifier:@"editContact" sender:self];
+    [self performSegueWithIdentifier:editContactSegue sender:self];
 }
-
 
 - (void)setEventDetail:(id)newDetailItem {
     if (_eventDetail != newDetailItem) {
@@ -40,7 +39,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"editContact"]) {
+    if ([[segue identifier] isEqualToString:editContactSegue]) {
         [[segue destinationViewController] setContext:self.eventDetail.managedObjectContext];
     }
 }
