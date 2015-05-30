@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B8B4A0E1B19DEC700440359 /* COContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B4A0D1B19DEC700440359 /* COContact.m */; };
+		9B8B4A111B19DF0E00440359 /* COContact+Calculated.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B4A101B19DF0E00440359 /* COContact+Calculated.m */; };
 		9BC95BD41B189E2C0078DCAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC95BD31B189E2C0078DCAE /* main.m */; };
 		9BC95BD71B189E2C0078DCAE /* COAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC95BD61B189E2C0078DCAE /* COAppDelegate.m */; };
 		9BC95BDA1B189E2C0078DCAE /* Contacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BC95BD81B189E2C0078DCAE /* Contacts.xcdatamodeld */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B8B4A0C1B19DEC700440359 /* COContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COContact.h; sourceTree = "<group>"; };
+		9B8B4A0D1B19DEC700440359 /* COContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COContact.m; sourceTree = "<group>"; };
+		9B8B4A0F1B19DF0E00440359 /* COContact+Calculated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "COContact+Calculated.h"; sourceTree = "<group>"; };
+		9B8B4A101B19DF0E00440359 /* COContact+Calculated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "COContact+Calculated.m"; sourceTree = "<group>"; };
 		9BC95BCE1B189E2C0078DCAE /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC95BD21B189E2C0078DCAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BC95BD31B189E2C0078DCAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -168,7 +174,11 @@
 		9BC95C041B18ADAC0078DCAE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9B8B4A0C1B19DEC700440359 /* COContact.h */,
+				9B8B4A0D1B19DEC700440359 /* COContact.m */,
 				9BC95BD81B189E2C0078DCAE /* Contacts.xcdatamodeld */,
+				9B8B4A0F1B19DF0E00440359 /* COContact+Calculated.h */,
+				9B8B4A101B19DF0E00440359 /* COContact+Calculated.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -281,7 +291,9 @@
 				9BC95C001B18A3640078DCAE /* COContactDetailViewController.m in Sources */,
 				9BC95C161B18B7C40078DCAE /* COContactEditViewController.m in Sources */,
 				9BC95BD71B189E2C0078DCAE /* COAppDelegate.m in Sources */,
+				9B8B4A0E1B19DEC700440359 /* COContact.m in Sources */,
 				9BC95BD41B189E2C0078DCAE /* main.m in Sources */,
+				9B8B4A111B19DF0E00440359 /* COContact+Calculated.m in Sources */,
 				9BC95C0A1B18AEA20078DCAE /* COContactListTableViewController.m in Sources */,
 				9BC95BDA1B189E2C0078DCAE /* Contacts.xcdatamodeld in Sources */,
 			);
@@ -478,6 +490,7 @@
 				9BC95BF91B189E2C0078DCAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BC95BFA1B189E2C0078DCAE /* Build configuration list for PBXNativeTarget "ContactsTests" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +499,7 @@
 				9BC95BFC1B189E2C0078DCAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

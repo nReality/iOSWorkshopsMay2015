@@ -24,12 +24,11 @@
 
 - (void)addOrUpdateContact {
     if ([self isAddingNew]){
-        NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Event" inManagedObjectContext:self.context];
-        [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-        
-    }else{
-        [self.eventDetail setValue:[NSDate date] forKey:@"timeStamp"];
+        self.eventDetail = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([COContact class]) inManagedObjectContext:self.context];
     }
+    
+    self.eventDetail.firstName = @"aaa";
+    self.eventDetail.lastName = @"bb";
     
     NSError *error = nil;
     if (![self.context save:&error]) {

@@ -3,6 +3,7 @@
 #import "COContactDetailViewController.h"
 #import "COContactTableViewCell.h"
 #import "COContactEditViewController.h"
+#import "COContact+Calculated.h"
 
 @implementation COContactListTableViewController
 
@@ -36,7 +37,7 @@ static NSString *addContactSegue = @"addContact";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:ShowDetailSegue]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        COContact *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         [[segue destinationViewController] setEventDetail:object];
     }
     if ([[segue identifier] isEqualToString:addContactSegue]) {
@@ -82,8 +83,8 @@ static NSString *addContactSegue = @"addContact";
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    COContact *contact = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = contact.fullName;
 }
 
 #pragma mark - Fetched results controller
@@ -95,12 +96,12 @@ static NSString *addContactSegue = @"addContact";
     }
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName: NSStringFromClass([COContact class]) inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
     [fetchRequest setFetchBatchSize:20];
     
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"lastName" ascending:NO];
     NSArray *sortDescriptors = @[sortDescriptor];
     
     [fetchRequest setSortDescriptors:sortDescriptors];

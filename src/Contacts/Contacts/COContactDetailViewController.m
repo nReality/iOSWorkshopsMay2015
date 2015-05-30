@@ -34,12 +34,13 @@ static NSString *editContactSegue = @"editContact";
 
 - (void)configureView {
     if (self.eventDetail) {
-        self.detailDescriptionLabel.text = [[self.eventDetail valueForKey:@"timeStamp"] description];
+        self.detailDescriptionLabel.text =self.eventDetail.fullName;
     }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:editContactSegue]) {
+        [[segue destinationViewController] setEventDetail: self.eventDetail];
         [[segue destinationViewController] setContext:self.eventDetail.managedObjectContext];
     }
 }
